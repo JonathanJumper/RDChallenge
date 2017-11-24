@@ -1,0 +1,61 @@
+<%= render partial: "layouts/errors" %>
+
+<%= form_with(model: contact, local: true) do |form| %>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card">
+
+        <div class="card-body">
+
+          <div class="row mb-2">
+            <div class="col-6">
+              <i class="fa fa-user-circle-o fa-fw"></i> <%= form.text_field :name, class: "form-control" %>
+            </div>
+            <div class="col-6 text-right">
+              <i class="fa fa-credit-card fa-fw"></i> <%= form.text_field :dni, class: "form-control" %>
+            </div>
+          </div>
+
+
+          <div class="row mb-2">
+            <div class="col-6">
+              <i class="fa fa-briefcase fa-fw"></i>  <%= form.text_field :job, class: "form-control"%>
+            </div>
+            <div class="col-6 text-right">
+              <i class="fa fa-envelope-o fa-fw"></i> <%= form.text_field :email, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-3 mt-auto">
+              <%= form.select :gender, boolean_from_genre, {}, class: "form-control" %>
+            </div>
+            <div class="col-3 mt-auto">
+              <%= form.number_field :age, class: "form-control"%>
+            </div>
+            <div  class="col-3">
+              <i class="fa fa-tag fa-fw"></i> <%= form.select :state, integer_from_state, {}, class: "form-control" %>
+            </div>
+            <div class="col-3 text-right">
+              <i class="fa fa-phone fa-fw"></i> <%= form.text_field :phone, class: "form-control" %>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card-header">
+          <i class="fa fa-globe fa-fw mr-2"></i> <%= form.select :city, City.all, {}, class: "form-control" %>
+        </div>
+
+      </div>
+
+      <div class="actions mt-4 text-right">
+        <%= form.submit t('update')+" "+t('contact'), class: "btn btn-outline-success"   %>
+      </div>
+
+    </div>
+  </div>
+
+
+<% end %>

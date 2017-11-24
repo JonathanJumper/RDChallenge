@@ -1,0 +1,63 @@
+<div class="title">
+  <h3><%= t('contact') %> </h3>
+  <span>
+    <%= link_to t('delete'), contacts_path, class: "btn btn-outline-danger"  %>
+    <%= link_to t('edit'), edit_contact_path(@contact), class: "btn btn-outline-primary" %>
+    <%= link_to t('back'), contacts_path, class: "btn btn-outline-primary"  %>
+  </span>
+</div>
+
+<div class="row">
+  <div class="col-8 offset-2">
+    <div class="card">
+
+      <div class="card-body">
+
+        <div class="row mb-2">
+          <div class="col-6">
+            <i class="fa fa-user-circle-o fa-fw"></i> <%= @contact.name %>
+          </div>
+          <div class="col-6 text-right">
+            <i class="fa fa-credit-card fa-fw"></i> <%= @contact.dni %>
+          </div>
+        </div>
+
+
+        <div class="row mb-2">
+          <div class="col-6">
+            <i class="fa fa-briefcase fa-fw"></i> <%= @contact.job %>
+          </div>
+          <div class="col-6 text-right">
+            <i class="fa fa-envelope-o fa-fw"></i> <%= @contact.email %>
+          </div>
+        </div>
+
+        <div class="row mb-2">
+          <div class="col-4">
+            <% if @contact.gender? %>
+                <i class="fa fa-mars fa-fw"></i> <%= @contact.age %>  <%= t('age') %>
+            <% else %>
+                <i class="fa fa-venus fa-fw"></i> <%= @contact.age %>  <%= t('age') %>
+            <% end %>
+          </div>
+          <div  class="col-4">
+            <i class="fa fa-tag fa-fw"></i> <%= t(integer_to_state(@contact.state)) %>
+          </div>
+          <div class="col-4 text-right">
+            <i class="fa fa-phone fa-fw"></i> <%= @contact.phone %>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="card-header">
+        <i class="fa fa-globe fa-fw mr-2"></i>
+        <%= @contact.city.name %>, <%= @contact.city.country %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,21 @@
+<div class="title">
+  <h3><%= t('cities') %> </h3>
+  <span>
+    <%= link_to t('new')+" "+t('city'), new_city_path, class: "btn btn-outline-success"  %>
+  </span>
+</div>
+
+<div class="contacts">
+  <% @cities.each do |city| %>
+      <%= link_to city do %>
+          <div class="card">
+
+            <div class="card-footer">
+              <i class="fa fa-globe fa-fw mr-2"></i> <%= city.name %>, <%= city.country %>
+            </div>
+
+          </div>
+      <% end %>
+  <% end %>
+</div>
+

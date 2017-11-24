@@ -1,0 +1,8 @@
+<div class="title">
+  <h3><%= t('edit')+" "+t('contacts') %> </h3>
+  <span>
+    <%= link_to t('back'), @contact, class: "btn btn-outline-primary"  %>
+  </span>
+</div>
+
+<%= render 'form', contact: @contact %>

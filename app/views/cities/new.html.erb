@@ -1,0 +1,8 @@
+<div class="title">
+  <h3><%= t('new')+" "+t('city') %> </h3>
+  <span>
+    <%= link_to t('back'), cities_path, class: "btn btn-outline-primary"  %>
+  </span>
+</div>
+<%= render 'form', city: @city %>
+

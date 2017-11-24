@@ -1,0 +1,31 @@
+<%= render partial: "layouts/errors" %>
+
+<%= form_with(model: city, local: true) do |form| %>
+
+    <div class="row">
+      <div class="col-8 offset-2">
+
+        <div class="card">
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-6">
+                <%= t('name') %>
+                <%= form.text_field :name, class: "form-control mt-2" %>
+              </div>
+              <div class="col-6">
+                <%= t('country') %>
+                <%= form.text_field :country, class: "form-control mt-2" %>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="actions mt-4 text-right">
+      <%= form.submit t('update')+" "+t('city'), class: "btn btn-outline-success"   %>
+    </div>
+
+<% end %>
