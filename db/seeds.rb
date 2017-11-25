@@ -12,7 +12,7 @@ City.create( name: "Buenos Aires", country: "Argentina" )
 City.create( name: "Santiago", country: "Chile" )
 City.create( name: "Mexico DF", country: "Mexico" )
 City.create( name: "Monterrey", country: "Mexico" )
-City.create( name: "Lima", country: "Mexico" )
+City.create( name: "Lima", country: "Peru" )
 
 Contact.create( name: "Maximilien Jaray", email: "mjaray0@sakura.ne.jp", age: 58, state: 2, job: "Social Worker", gender: false, dni: "7674258408", phone: "+55 592 728 2297", city_id: 7 )
 Contact.create( name: "Marnie Pauwel", email: "mpauwel1@seattletimes.com", age: 25, state: 2, job: "Programmer Analyst I", gender: true, dni: "4062514184", phone: "+55 720 596 5838", city_id: 2 )

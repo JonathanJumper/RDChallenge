@@ -35,7 +35,7 @@
               <%= form.number_field :age, class: "form-control"%>
             </div>
             <div  class="col-3">
-              <i class="fa fa-tag fa-fw"></i> <%= form.select :state, integer_from_state, {}, class: "form-control" %>
+              <i class="fa fa-tag fa-fw"></i> <%= form.select :state, human_attribute_states, {}, class: "form-control" %>
             </div>
             <div class="col-3 text-right">
               <i class="fa fa-phone fa-fw"></i> <%= form.text_field :phone, class: "form-control" %>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="card-header">
-          <i class="fa fa-globe fa-fw mr-2"></i> <%= form.select :city, City.all, {}, class: "form-control" %>
+          <i class="fa fa-globe fa-fw mr-2"></i> <%= form.collection_select :city_id, City.all, :id, :name, {}, class: "form-control" %>
         </div>
 
       </div>

@@ -41,7 +41,7 @@
             <% end %>
           </div>
           <div  class="col-4">
-            <i class="fa fa-tag fa-fw"></i> <%= t(integer_to_state(@contact.state)) %>
+            <i class="fa fa-tag fa-fw"></i> <%= human_attribute_state(@contact.state) %>
           </div>
           <div class="col-4 text-right">
             <i class="fa fa-phone fa-fw"></i> <%= @contact.phone %>

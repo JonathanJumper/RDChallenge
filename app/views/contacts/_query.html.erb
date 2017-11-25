@@ -1,0 +1,98 @@
+<div class="card text-black bg-faded mb-3">
+  <div id="query" class="card-body">
+    <div class="row">
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-user-circle-o fa-fw"></i> </div>
+            <input class="form-control" id="filterName"  placeholder=<%= t('name') %> >
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-briefcase fa-fw"></i> </div>
+          <input class="form-control" id="filterJob" placeholder=<%= t('job') %> >
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-envelope-o fa-fw"></i> </div>
+          <input class="form-control" id="filterEmail" placeholder=<%= t('email') %> >
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-credit-card fa-fw"></i> </div>
+          <input class="form-control" id="filterDNI" placeholder=<%= t('dni') %> >
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-phone fa-fw"></i> </div>
+          <input class="form-control" id="filterPhone" placeholder=<%= t('phone') %> >
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="input-group">
+          <input class="form-control my-0 py0" id="filterAgeInput" placeholder=<%= t('age') %> >
+        </div>
+      </div>
+
+      <div class="col-2 text-right">
+        <div class="btn-group" data-toggle="buttons" id="filterAge">
+          <label class="btn btn-outline-primary" id="ageEqual">
+            <input type="radio" name="options"> =
+          </label>
+          <label class="btn btn-outline-primary" id="ageGreater">
+            <input type="radio" name="options"> >
+          </label>
+          <label class="btn btn-outline-primary" id="ageLess">
+            <input type="radio" name="options"> <
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-3">
+
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-globe fa-fw"></i> </div>
+          <%= select_tag('filterCity', options_from_collection_for_select(City.all, 'id', 'name', params[:city]), prompt: t('city'), class: 'selectpicker form-control') %>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="input-group">
+          <div class="input-group-addon"> <i class="fa fa-tag  fa-fw"></i> </div>
+          <%= select_tag( 'filterState', options_for_select(human_attribute_states, params[:state]),  prompt: t('state') , class: "form-control") %>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="btn-group" data-toggle="buttons" id="filterGender">
+          <label class="btn btn-outline-primary" id="genderless">
+            <input type="radio" name="options"> <i class="fa fa-genderless fa-fw"></i>
+          </label>
+          <label class="btn btn-outline-primary" id="male">
+            <input type="radio" name="options"> <i class="fa fa-mars fa-fw"></i>
+          </label>
+          <label class="btn btn-outline-primary" id="female">
+            <input type="radio" name="options"> <i class="fa fa-venus fa-fw"></i>
+          </label>
+        </div>
+      </div>
+
+      <div class="col-2 text-right">
+        <button id="queryButton" type="submit" class="btn btn-outline-primary">
+          <i class="fa fa-search fa-fw"></i> Search
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

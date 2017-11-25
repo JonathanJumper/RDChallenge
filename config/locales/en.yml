@@ -37,16 +37,26 @@ en:
   update: "Update"
   contact: "Contact"
   contacts: "Contacts"
+
+  name: "Name"
+  job: "Job"
+  email: "Email"
+  dni: "DNI"
+  phone: "Phone"
+  age: "Years"
+  state: "State"
   gender: "Gender"
-  age: "Years old"
-  city: "City"
-  normal: "Normal"
-  disabled: "Disabled"
-  premium: "Premium"
+
   city: "City"
   cities: "Cities"
-  name: "Name"
   country: "Country"
   created: "was successfully created."
   updated: "was successfully updated."
   destroyed: "was successfully destroyed."
+
+  activerecord:
+     attributes:
+       contact/state:
+         open: "Open"
+         qualified: "Qualified"
+         rejected: "Rejected"

@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts
   def index
-    @contacts = Contact.all
+    @contacts = Contact.filter(params)
   end
 
   # GET /contacts/1
@@ -55,6 +55,6 @@ class ContactsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :age, :state, :job, :gender, :dni, :phone)
+      params.require(:contact).permit(:name, :email, :age, :state, :job, :gender, :dni, :phone, :city_id)
     end
 end
