@@ -17,7 +17,9 @@ document.addEventListener("turbolinks:load", function() {
         function fetchParams() {
 
             if ( location.href.indexOf("?") !== -1 ) {
-                query = new Map(location.href.split("#")[0].split("?")[1].split("&").map(el=>el.split("=")));
+                locationArray = location.href.split("#")[0].split("?")[1].split("&");
+                //query = new Map(location.map( el => el.split("=")));
+                query = new Map(locationArray.map(function(param) { return param.split("="); }));
 
                 name = query.get("name");
                 job = query.get("job");

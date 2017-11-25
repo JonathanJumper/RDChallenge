@@ -1,0 +1,34 @@
+pt:
+  new: "Criar"
+  edit: "Editar"
+  delete: "Excluir"
+  back: "Voltar"
+  update: "Atualização"
+  contact: "Contato"
+  contacts: "Contatos"
+
+  name: "Nome"
+  job: "Trabalho"
+  email: "Email"
+  dni: "DNI"
+  phone: "Telefone"
+  age: "Idade"
+  state: "Estado"
+  gender: "Gênero"
+
+  city: "Cidade"
+  cities: "Cidades"
+  country: "País"
+  created: "foi criado com sucesso."
+  updated: "foi atualizado com sucesso."
+  destroyed: "foi destruído com sucesso."
+
+  made: "Feito com"
+  by: "por"
+
+  activerecord:
+     attributes:
+       contact/state:
+         open: "Aberto"
+         qualified: "Aceitaram"
+         rejected: "Rejeitado"

@@ -14,6 +14,7 @@ City.create( name: "Mexico DF", country: "Mexico" )
 City.create( name: "Monterrey", country: "Mexico" )
 City.create( name: "Lima", country: "Peru" )
 
+Contact.create( name: "Jonathan M. Chingaté", email: "jomartinezch@gmail.com", age: 22, state: 2, job: "Great Software Developer", gender: true, dni: "0102010102", phone: "+57 319 250 6172", city_id: 1 )
 Contact.create( name: "Maximilien Jaray", email: "mjaray0@sakura.ne.jp", age: 58, state: 2, job: "Social Worker", gender: false, dni: "7674258408", phone: "+55 592 728 2297", city_id: 7 )
 Contact.create( name: "Marnie Pauwel", email: "mpauwel1@seattletimes.com", age: 25, state: 2, job: "Programmer Analyst I", gender: true, dni: "4062514184", phone: "+55 720 596 5838", city_id: 2 )
 Contact.create( name: "Tessy Rivlin", email: "trivlin2@hugedomains.com", age: 39, state: 2, job: "VP Sales", gender: false, dni: "6167111111", phone: "+20 399 496 9957", city_id: 9 )

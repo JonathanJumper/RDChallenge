@@ -1,7 +1,7 @@
-@import "bootstrap";
-@import "bootstrap-theme";
 @import "variables";
 @import "bootswatch";
+@import "bootstrap";
+@import "bootstrap-theme";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -125,6 +125,7 @@ html, body {
 
 #footer .bottom a {
   color: #18BC9C;
+  text-decoration: none;
 }
 
 #footer .bottom .center {

@@ -1,7 +1,7 @@
 class Contact < ApplicationRecord
   belongs_to :city
   # enum gender: { male: true, female: false }
-  enum state: { open: 1, qualified: 2, rejected: 3 }
+  enum state: { open: 1, accepted: 2, rejected: 3 }
 
   scope :name_like, -> (name) { where('name ILIKE ?', "%#{name}%") }
   scope :email_like, -> (email) { where('email ILIKE ?', "%#{email}%") }

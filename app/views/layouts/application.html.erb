@@ -22,8 +22,6 @@
 
           <ul class="navbar-nav mr-auto">
 
-
-
           </ul>
 
           <ul class="navbar-nav">
@@ -38,6 +36,12 @@
     </div>
 
     <div id="bodier">
+      <div id="flash">
+        <% flash.each do |key, value| -%>
+            <div class="flash alert <%= alert_class(key) %>"><%= value %></div>
+        <% end %>
+      </div>
+
       <%= yield %>
     </div>
 
@@ -46,17 +50,15 @@
   <div id="footer">
     <div class="bottom">
       <div class="left">
-        <select>
-          <option>EN</option>
-          <option>ES</option>
-          <option>BR</option>
-        </select>
+        <%= link_to "EN", locale: :en %>
+        <%= link_to "BR", locale: :pt %>
+        <%= link_to "ES", locale: :es %>
       </div>
       <div class="center">
-        Digitais Challenge <a href=""> <i class="fa fa-github fa-fw" aria-hidden="true"></i></a> 2017
+        Resultados Digitais Challenge <a href="https://github.com/JonathanJumper/RDChallenge" target="_blank"> <i class="fa fa-github fa-fw" aria-hidden="true"></i></a> 2017
       </div>
       <div class="right">
-        Hecho con <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="http://chingate.co" target="_blank" style="text-decoration: none">Chingaté</a>
+        <%= t('made') %> <i class="fa fa-heart-o" aria-hidden="true"></i> <%= t('by') %> <a href="http://chingate.co" target="_blank" style="text-decoration: none">Chingaté</a>
       </div>
     </div>
 
